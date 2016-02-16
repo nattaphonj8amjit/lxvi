@@ -12,16 +12,16 @@ func main() {
 
 	router := gin.Default()
 
-	router.LoadHTMLGlob("templates/**/*")
+	router.LoadHTMLGlob("../html/*")
 
 
-	router.GET("/index", func(c *gin.Context) {
+	router.GET("", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
 			"title": "LXVI NEW UPDATE",
 		})  
 	})
 
-	router.Run(":80")
+	router.Run(":8080")
 
 }
 
