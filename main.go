@@ -12,7 +12,7 @@ func main() {
 
 	router := gin.Default()
 
-	router.LoadHTMLGlob("../html/*")
+	router.LoadHTMLGlob("html/*")
 
 
 	router.GET("", func(c *gin.Context) {
