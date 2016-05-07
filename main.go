@@ -125,6 +125,4 @@ func main() {
 
 }
 
-
-
 //db.C(Collection).Find(Query).Limit(limit).Sort(sortBy...)
