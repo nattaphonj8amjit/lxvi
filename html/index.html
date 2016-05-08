@@ -4,25 +4,26 @@
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Nova+Round' rel='stylesheet' type='text/css'>
     <script src="/js/jquery-2.2.0.min.js"></script>
     <script src="/js/semantic.min.js"></script>
+    <script src="/js/main.js"></script>
 
     <style>
-        body, div.column,div.content div.header{
-            font-family: 'Quicksand', sans-serif!important;
+        body, div.column, div.content div.header,div.ui.statistic div.value,div.ui.statistic div.label {
+            font-family: 'Quicksand', sans-serif !important;
         }
     </style>
 
-    <script>
-
-        $(function () {
-            $('.ui.selection.dropdown').dropdown();
-
-        })
-
-    </script>
 
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=276750795990699";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!--container-->
 <div class="ui Fluid container">
@@ -30,21 +31,30 @@
     <div class="ui three column celled grid">
         <div class="row">
             <div class="column">
-                1
+                LXVI Logo
             </div>
             <div class="column">
-                2
+                <div class="ui icon Fluid input">
+                    <input type="text" placeholder="">
+                    <i class="inverted circular search link green icon"></i>
+                </div>
             </div>
-            <div class="column">
-                3
+            <div class="cmiddle aligned center aligned olumn">
+                <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+                <!--<div-->
+                        <!--class="fb-like"-->
+                        <!--data-share="true"-->
+                        <!--data-width="450"-->
+                        <!--data-show-faces="true">-->
+                <!--</div>-->
             </div>
         </div>
         <div class="row">
             <div class="column">
-                4
+                Filter Collection Button
             </div>
             <div class="column">
-                5
+                Filter Detail Button
             </div>
             <div class="middle aligned center aligned column">
                 <div class="ui selection dropdown">
@@ -71,123 +81,9 @@
     </div>
 
     <div class="ui container" style="width: 88%">
-        <div class="ui stackable four column grid">
-            <div class="column">
-                <div class="ui card">
-                    <div class="ui slide masked reveal image">
-                        <img src="http://semantic-ui.com/images/avatar/large/jenny.jpg" class="visible content">
-                        <img src="http://semantic-ui.com/images/avatar/large/elliot.jpg" class="hidden content">
-                    </div>
-
-                    <div class="content">
-                        <div class="header">Matt Giampietro</div>
-                        <div class="meta">
-                            <a>Friends</a>
-                        </div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="ui card">
-                    <div class="ui slide masked reveal image">
-                        <img src="http://semantic-ui.com/images/avatar/large/elliot.jpg" class="visible content">
-                        <img src="http://semantic-ui.com/images/avatar2/large/molly.png" class="hidden content">
-                    </div>
-                    <div class="content">
-                        <div class="header">Matt Giampietro</div>
-                        <div class="meta">
-                            <a>Friends</a>
-                        </div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
-                    </div>
-                </div>
-            </div>
+        <div class="ui stackable four column grid" id="goodsGrid">
 
 
-            <div class="column">
-                <div class="ui card">
-                    <div class="ui slide masked reveal image">
-                        <img src="http://semantic-ui.com/images/avatar2/large/molly.png" class="visible content">
-                        <img src="http://semantic-ui.com/images/avatar2/large/matthew.png" class="hidden content">
-                    </div>
-                    <div class="content">
-                        <div class="header">Matt Giampietro</div>
-                        <div class="meta">
-                            <a>Friends</a>
-                        </div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="column">
-                <div class="ui card">
-                    <div class="ui slide masked reveal image">
-                        <img src="http://semantic-ui.com/images/avatar2/large/matthew.png" class="visible content">
-                        <img src="http://semantic-ui.com/images/avatar/large/jenny.jpg" class="hidden content">
-                    </div>
-                    <div class="content">
-                        <div class="header">Matt Giampietro</div>
-                        <div class="meta">
-                            <a>Friends</a>
-                        </div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">5</div>
-            <div class="column">6</div>
-            <div class="column">7</div>
-            <div class="column">8</div>
         </div>
     </div>
 

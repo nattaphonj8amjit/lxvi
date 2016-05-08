@@ -14,7 +14,7 @@ type MyCollection struct {
 }
 
 func (mc *MyCollection) findAllGoods() (response []goods) {
-	err := mc.Find(bson.M{}).Sort("price").All(&response)
+	err := mc.Find(bson.M{}).Sort("price").Sort("collection").All(&response)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,6 +51,8 @@ type goods struct {
 	Detail     string
 	ShipDetail string
 	Option     []option
+	Voted      int
+	Imgsrc     string
 }
 
 type option struct {
