@@ -43,8 +43,7 @@ MainJS = (function ($) {
                         '   Joined in 2013' +
                         '   </span>' +
                         '   <span>' +
-                        '   <i class="Thumbs Up icon"></i>' +
-                        '   '+digits(obj.Voted)+' Voted' +
+                        '<div class="fb-share-button" data-href="https://lxvi.co" data-layout="button_count" data-mobile-iframe="true"></div>' +
                         '</span>' +
                         '</div>' +
                         '</div>' +
