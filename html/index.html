@@ -26,6 +26,12 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+}
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -37,6 +43,7 @@ function statusChangeCallback(response) {
                 {},
                 function (response) {
                     console.log(response.data.url);
+                    $('img#fbimg').attr('src',response.data.url);
                 }
         );
 
@@ -47,14 +54,17 @@ function statusChangeCallback(response) {
                         console.log(response.id);
                         console.log(response.name);
                         console.log(response.gender);
+                        $('#fbname').html(response.name);
                     }
                 }
         );
 
     } else if (response.status === 'not_authorized') {
-
+        $('img#fbimg').attr('src','');
+        $('#fbname').html('');
     } else {
-
+        $('img#fbimg').attr('src','');
+        $('#fbname').html('');
     }
 }
 
@@ -65,69 +75,87 @@ function statusChangeCallback(response) {
 
     <div class="ui three column vertically divided grid">
         <div class="row">
-            <div class="column">
+            <div class="middle aligned column">
                 LXVI Logo
             </div>
-            <div class="column">
+            <div class="middle aligned column">
                 <div class="ui icon Fluid input">
                     <input type="text" placeholder="">
                     <i class="inverted circular search link green icon"></i>
                 </div>
             </div>
-            <div class="middle aligned right floated column">
-                <!--             <fb:login-button scope="public_profile,email"  data-size="large" data-auto-logout-link="true"></fb:login-button>
-                     -->
+            <div class="middle aligned column">
 
-                <div class="fb-login-button" scope="public_profile,email" data-size="large" data-auto-logout-link="true"
-                     onlogin="checkLoginState();">
-    </div>
+                <div class="ui two column grid">
+
+                    <div class="middle aligned center aligned column">
+                        <div class="ui grid">
+
+                            <div class="middle aligned right aligned six wide column" style="padding: 1px">
+                                <img width="33px" height="33px" id="fbimg" style="-webkit-user-select: none" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xft1/v/t1.0-1/p50x50/1919121_121706578205803_5172765231473886065_n.jpg?oh=8ea3e58b264a1d2b658fa6f869f7cf2f&oe=57E511DE&__gda__=1470534658_cd0330d83c2ac4568ded08de4d51c37c">
+                            </div>
+                            <div class="middle aligned ten wide column" style="font-size: 12px;font-style: italic; padding: 1px;" id="fbname"></div>
+                        </div>
 
 
 
-  </div>
+
+                    </div>
+                    <div class="middle aligned column">
+
+                        <div class="fb-login-button" scope="public_profile,email" data-size="large"
+                             data-auto-logout-link="true"
+                             onlogin="checkLoginState();"></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
         </div>
         <div class="row">
-                <div class="column">
-                    Filter Collection Button
-                </div>
-                <div class="column">
-                    Filter Detail Button
+            <div class="column">
+                Filter Collection Button
+            </div>
+            <div class="column">
+                Filter Detail Button
 
-                </div>
-                <div class="middle aligned center aligned column">
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="sortby">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Sort By</div>
-                        <div class="menu">
-                            <div class="item" data-value="Price" data-text="Price">
-                                <i class="dollar icon"></i>
-                                Price
-                            </div>
-                            <div class="item" data-value="Voted" data-text="Voted">
-                                <i class="Thumbs Up icon"></i>
-                                Voted
-                            </div>
-                            <div class="item" data-value="Star" data-text="Star">
-                                <i class="Star icon"></i>
-                                Star
-                            </div>
+            </div>
+            <div class="middle aligned center aligned column">
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="sortby">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Sort By</div>
+                    <div class="menu">
+                        <div class="item" data-value="Price" data-text="Price">
+                            <i class="dollar icon"></i>
+                            Price
+                        </div>
+                        <div class="item" data-value="Voted" data-text="Voted">
+                            <i class="Thumbs Up icon"></i>
+                            Voted
+                        </div>
+                        <div class="item" data-value="Star" data-text="Star">
+                            <i class="Star icon"></i>
+                            Star
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="ui container" style="width: 88%">
-            <div class="ui stackable four column vertically divided grid" id="goodsGrid">
-
-
-            </div>
-        </div>
-
-
     </div>
-    <!--end container-->
+
+    <div class="ui container" style="width: 88%">
+        <div class="ui stackable four column vertically divided grid" id="goodsGrid">
+
+
+        </div>
+    </div>
+
+
+</div>
+<!--end container-->
 
 
 </body>
