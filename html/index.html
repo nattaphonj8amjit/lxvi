@@ -7,7 +7,7 @@
     <script src="/js/main.js"></script>
 
     <style>
-        body, div.column, div.content div.header,div.ui.statistic div.value,div.ui.statistic div.label {
+        body, div.column, div.content div.header, div.ui.statistic div.value, div.ui.statistic div.label {
             font-family: 'Quicksand', sans-serif !important;
         }
     </style>
@@ -17,13 +17,48 @@
 <body>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=276750795990699";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+
+        FB.api(
+                '/me/picture',
+                'GET',
+                {},
+                function (response) {
+                    console.log(response.data.url);
+                }
+        );
+
+        FB.api(
+                "/me?fields=id,name,gender,birthday,relationship_status",
+                function (response) {
+                    if (response && !response.error) {
+                        console.log(response.id);
+                        console.log(response.name);
+                        console.log(response.gender);
+                    }
+                }
+        );
+
+    } else if (response.status === 'not_authorized') {
+
+    } else {
+
+    }
+}
+
+</script>
 
 <!--container-->
 <div class="ui Fluid container">
@@ -40,10 +75,11 @@
                 </div>
             </div>
             <div class="middle aligned right floated column">
-   <!--             <fb:login-button scope="public_profile,email"  data-size="large" data-auto-logout-link="true"></fb:login-button>
-        -->  
+                <!--             <fb:login-button scope="public_profile,email"  data-size="large" data-auto-logout-link="true"></fb:login-button>
+                     -->
 
-    <div class="fb-login-button" scope="public_profile,email"  data-size="large" data-auto-logout-link="true">
+                <div class="fb-login-button" scope="public_profile,email" data-size="large" data-auto-logout-link="true"
+                     onlogin="checkLoginState();">
     </div>
 
 
@@ -51,47 +87,47 @@
   </div>
         </div>
         <div class="row">
-            <div class="column">
-                Filter Collection Button
-            </div>
-            <div class="column">
-                Filter Detail Button
+                <div class="column">
+                    Filter Collection Button
+                </div>
+                <div class="column">
+                    Filter Detail Button
 
-            </div>
-            <div class="middle aligned center aligned column">
-                <div class="ui selection dropdown">
-                    <input type="hidden" name="sortby">
-                    <i class="dropdown icon"></i>
-                    <div class="default text">Sort By</div>
-                    <div class="menu">
-                        <div class="item" data-value="Price" data-text="Price">
-                            <i class="dollar icon"></i>
-                            Price
-                        </div>
-                        <div class="item" data-value="Voted" data-text="Voted">
-                            <i class="Thumbs Up icon"></i>
-                            Voted
-                        </div>
-                        <div class="item" data-value="Star" data-text="Star">
-                            <i class="Star icon"></i>
-                            Star
+                </div>
+                <div class="middle aligned center aligned column">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="sortby">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Sort By</div>
+                        <div class="menu">
+                            <div class="item" data-value="Price" data-text="Price">
+                                <i class="dollar icon"></i>
+                                Price
+                            </div>
+                            <div class="item" data-value="Voted" data-text="Voted">
+                                <i class="Thumbs Up icon"></i>
+                                Voted
+                            </div>
+                            <div class="item" data-value="Star" data-text="Star">
+                                <i class="Star icon"></i>
+                                Star
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="ui container" style="width: 88%">
-        <div class="ui stackable four column vertically divided grid" id="goodsGrid">
+        <div class="ui container" style="width: 88%">
+            <div class="ui stackable four column vertically divided grid" id="goodsGrid">
 
 
+            </div>
         </div>
+
+
     </div>
-
-
-</div>
-<!--end container-->
+    <!--end container-->
 
 
 </body>

@@ -9,6 +9,12 @@ MainJS = (function ($) {
          return digit.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     }
 
+
+
+
+
+
+
     function getAllGoods() {
         $.ajax({
                 method: "GET",
