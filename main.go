@@ -123,7 +123,7 @@ func main() {
 		c.JSON(http.StatusOK, mc.findOneGoodsById(goodsId))
 
 	})
-	router.Run(":8081")
+	router.Run(":9090")
 
 }
 
