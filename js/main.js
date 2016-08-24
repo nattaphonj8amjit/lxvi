@@ -49,7 +49,8 @@ MainJS = (function ($) {
                         '   Joined in 2013' +
                         '   </span>' +
                         '   <span>' +
-                        '<div class="fb-share-button" data-href="https://lxvi.co" data-layout="button_count" data-mobile-iframe="true"></div>' +
+ //                       '<div class="fb-share-button" data-href="https://lxvi.co" data-layout="button_count" data-mobile-iframe="true"></div>' +
+'<div class="fb-like" data-href="http://lxvi.co" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>'+
                         '</span>' +
                         '</div>' +
                         '</div>' +
