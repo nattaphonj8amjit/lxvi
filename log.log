@@ -1,4 +1,0 @@
-goodsId 5700a6a0c557361e94d4f798
-[GIN] 2016/05/07 - 15:55:00 |[97;42m 200 [0m|      91.691µs | ::1 |[97;44m  [0m GET     /findOneGoodsById/5700a6a0c557361e94d4f798
-goodsId 5700a6a0c557361e94d4f798
-[GIN] 2016/05/07 - 15:55:07 |[97;42m 200 [0m|      24.404µs | ::1 |[97;44m  [0m GET     /findOneGoodsById/5700a6a0c557361e94d4f798

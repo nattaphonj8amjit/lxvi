@@ -33,7 +33,7 @@ MainJS = (function ($) {
                        // '   <img src="http://semantic-ui.com/images/avatar/large/elliot.jpg" class="hidden content">' +
                         '   </div>' +
                         '   <div class="content">' +
-                        '   <div class="header">' + obj.Name + '</div>' +
+                        '   <div class="header"> <a href="/findDetail"> ' + obj.Name + '</a></div>' +
                         '<div class="meta">' +
                         '   <a>' + obj.Collection + '</a>' +
                         '   </div>' +

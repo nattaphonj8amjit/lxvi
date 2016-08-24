@@ -64,6 +64,7 @@ type option struct {
 func main() {
 
 	// init
+	gin.SetMode(gin.DebugMode)
 	//gin.SetMode(gin.ReleaseMode)
 
 	router := gin.Default()
@@ -90,7 +91,6 @@ func main() {
 		prod.Login("admin", "Ball0931372529")
 		mc := &MyCollection{prod.C("goods")}
 		c.JSON(http.StatusOK, mc.findAllGoods())
-
 	})
 
 	router.GET("/findAllGoodsByCollection/:goodsCollection", func(c *gin.Context) {
@@ -123,7 +123,7 @@ func main() {
 		c.JSON(http.StatusOK, mc.findOneGoodsById(goodsId))
 
 	})
-	router.Run(":8081")
+
 
 }
 

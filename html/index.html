@@ -59,15 +59,22 @@ function statusChangeCallback(response) {
                 }
         );
 
+console.log('connected')
     } else if (response.status === 'not_authorized') {
         $('img#fbimg').attr('src','');
         $('#fbname').html('');
+        console.log('not_authorized')
     } else {
         $('img#fbimg').attr('src','');
         $('#fbname').html('');
+        console.log('other')
     }
 }
 
+         $(function(){
+           checkLoginState();
+           })
+         
 </script>
 
 <!--container-->
@@ -76,7 +83,7 @@ function statusChangeCallback(response) {
     <div class="ui three column vertically divided grid">
         <div class="row">
             <div class="middle aligned column">
-                LXVI Logo
+                LXVI
             </div>
             <div class="middle aligned column">
                 <div class="ui icon Fluid input">
@@ -96,9 +103,6 @@ function statusChangeCallback(response) {
                             </div>
                             <div class="middle aligned ten wide column" style="font-size: 12px;font-style: italic; padding: 1px;" id="fbname"></div>
                         </div>
-
-
-
 
                     </div>
                     <div class="middle aligned column">
