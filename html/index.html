@@ -1,14 +1,16 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Nova+Round' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/css/font.css">
     <script src="/js/jquery-2.2.0.min.js"></script>
     <script src="/js/semantic.min.js"></script>
     <script src="/js/main.js"></script>
 
     <style>
-        body, div.column, div.content div.header, div.ui.statistic div.value, div.ui.statistic div.label {
-            font-family: 'Quicksand', sans-serif !important;
+        body, div, span , table , tr , td, button {
+            font-family: 'TH Sarabun New' !important;
+            font-size:19px!important;
+            font-weight:400!important;
         }
     </style>
 
@@ -23,62 +25,45 @@
     <div class="ui three column vertically divided grid">
         <div class="row">
             <div class="middle aligned column">
-                LXVI
+            </div>
+            <div class="middle aligned center aligned column">
+                <span style="font-size:50px!important;">  LXVI <span>
             </div>
             <div class="middle aligned column">
-                <div class="ui icon Fluid input">
-                    <input type="text" placeholder="">
-                    <i class="inverted circular search link green icon"></i>
-                </div>
-            </div>
-            <div class="middle aligned column">
-
-                <div class="ui two column grid">
-
-                    <div class="middle aligned center aligned column">
-                        <div class="ui grid">
-
-                            <div class="middle aligned right aligned six wide column" style="padding: 1px">
-                                <img width="33px" height="33px" id="fbimg" style="-webkit-user-select: none" src="">                            </div>
-                            <div class="middle aligned ten wide column" style="font-size: 12px;font-style: italic; padding: 1px;" id="fbname"></div>
-                        </div>
-
-                    </div>
-                    <div class="middle aligned column">
-
-
-                    </div>
-
-                </div>
-
-
             </div>
         </div>
         <div class="row">
-            <div class="column">
-                Filter Collection Button
+            <div class="middle aligned center aligned column">
+                 <button class="ui gray basic mini button">ใบสั้น</button>
+                 <button class="ui gray basic mini button">ใบกลาง</button>
+                 <button class="ui gray basic mini button">ใบยาว</button>
             </div>
-            <div class="column">
-                Filter Detail Button
-
+            <div class="middle aligned center aligned column">
+                <div class="ui icon Fluid input">
+                    <input type="text" placeholder="">
+                        <i class="inverted circular search link green icon"></i>
+                        </div>
             </div>
             <div class="middle aligned center aligned column">
                 <div class="ui selection dropdown">
                     <input type="hidden" name="sortby">
                     <i class="dropdown icon"></i>
-                    <div class="default text">Sort By</div>
+                    <div class="default text">จัดเรียงลำดับตาม</div>
                     <div class="menu">
-                        <div class="item" data-value="Price" data-text="Price">
-                            <i class="dollar icon"></i>
-                            Price
+                        <div class="item" data-value="Price" data-text="ราคา มาก ไป น้อย">
+                            ราคา มาก ไป น้อย
                         </div>
-                        <div class="item" data-value="Voted" data-text="Voted">
-                            <i class="Thumbs Up icon"></i>
-                            Voted
+                        <div class="item" data-value="Price" data-text="ราคา น้อย ไป มาก">
+                            
+                            ราคา น้อย ไป มาก
                         </div>
-                        <div class="item" data-value="Star" data-text="Star">
-                            <i class="Star icon"></i>
-                            Star
+                        <div class="item" data-value="Star" data-text="วันที่เปิดตัว ใหม่ ไป เก่า">
+                            
+                            วันที่เปิดตัว ใหม่ ไป เก่า
+                        </div>
+                        <div class="item" data-value="Star" data-text="วันที่เปิดตัว เก่า ไป ใหม่">
+                            
+                           วันที่เปิดตัว เก่า ไป ใหม่
                         </div>
                     </div>
                 </div>
