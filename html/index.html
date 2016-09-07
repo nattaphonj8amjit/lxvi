@@ -7,11 +7,17 @@
     <script src="/js/main.js"></script>
 
     <style>
-        body, div, span , table , tr , td, button {
-            font-family: 'TH Sarabun New' !important;
-            font-size:19px!important;
-            font-weight:400!important;
+        body, div, span , table , tr , td, button, input {
+            font-family: 'T' !important;
+            font-size:18px!important;
+            font-weight: bold !important;
         }
+    #lxviLogo{
+        font-family: 'K'!important;
+        font-size:5em!important;
+        position:relative;
+        top:20px;
+    }
     </style>
 
 
@@ -20,32 +26,42 @@
 
 
 <!--container-->
-<div class="ui Fluid container">
-
+<div class="ui center aligned container">
     <div class="ui three column vertically divided grid">
-        <div class="row">
+        <div class="ui stackable row">
             <div class="middle aligned column">
             </div>
             <div class="middle aligned center aligned column">
-                <span style="font-size:50px!important;">  LXVI <span>
+                <span id="lxviLogo"> LXVI <span>
             </div>
             <div class="middle aligned column">
             </div>
         </div>
-        <div class="row">
-            <div class="middle aligned center aligned column">
-                 <button class="ui gray basic mini button">ใบสั้น</button>
-                 <button class="ui gray basic mini button">ใบกลาง</button>
-                 <button class="ui gray basic mini button">ใบยาว</button>
+        <div class="ui stackable row">
+            <div class="ui middle aligned center aligned column">
+                   <div class="ui three column grid">
+                 <div class="ui stackable row">
+                        <div class="ui middle aligned right aligned column">
+                             <button class="ui Fluid gray basic mini button" style="min-width:66px">ใบสั้น</button>
+                               </div>
+                        <div class="ui middle aligned center aligned column">
+                            <button class="ui Fluid gray basic mini button" style="min-width:66px">ใบกลาง</button>
+                        </div>
+                        <div class="ui middle aligned center aligned column">
+                            <button class="ui Fluid gray basic mini button" style="min-width:66px">ใบยาว</button>
+                        </div>
+                     </div>
+                 </div>
+               
             </div>
-            <div class="middle aligned center aligned column">
+            <div class="ui middle aligned center aligned computer only column">
                 <div class="ui icon Fluid input">
                     <input type="text" placeholder="">
                         <i class="inverted circular search link green icon"></i>
                         </div>
             </div>
-            <div class="middle aligned center aligned column">
-                <div class="ui selection dropdown">
+            <div class="ui middle aligned center aligned computer only column">
+                <div class="ui Fluid selection dropdown">
                     <input type="hidden" name="sortby">
                     <i class="dropdown icon"></i>
                     <div class="default text">จัดเรียงลำดับตาม</div>
@@ -71,10 +87,35 @@
         </div>
     </div>
 
-    <div class="ui container" style="width: 88%">
-        <div class="ui stackable four column vertically divided grid" id="goodsGrid">
-
-
+    <div class="ui center aligned container" >
+        <div class="ui three column grid" id="goodsGrid">
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14269081_1564344110540697_1496954263_n.jpg?ig_cache_key=MTMzMjI3MjI5MzcwNzMzNzgxMg%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14134599_1755458658028016_179491710_n.jpg?ig_cache_key=MTMzMTgzMzU0ODM2OTU3MTY0MA%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+<img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c117.0.846.846/14072995_1760468224241101_545056478_n.jpg?ig_cache_key=MTMzMTg0MTI1NTIxODg3MTIzMA%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14269081_1564344110540697_1496954263_n.jpg?ig_cache_key=MTMzMjI3MjI5MzcwNzMzNzgxMg%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14134599_1755458658028016_179491710_n.jpg?ig_cache_key=MTMzMTgzMzU0ODM2OTU3MTY0MA%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c117.0.846.846/14072995_1760468224241101_545056478_n.jpg?ig_cache_key=MTMzMTg0MTI1NTIxODg3MTIzMA%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14269081_1564344110540697_1496954263_n.jpg?ig_cache_key=MTMzMjI3MjI5MzcwNzMzNzgxMg%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c181.0.718.718/14134599_1755458658028016_179491710_n.jpg?ig_cache_key=MTMzMTgzMzU0ODM2OTU3MTY0MA%3D%3D.2.c">
+</div>
+<div class="column" style="padding:0.5rem!important;">
+    <img class="ui Fluid image" style="max-width:100%; height:auto;width: auto;" src="https://instagram.fbkk9-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/c117.0.846.846/14072995_1760468224241101_545056478_n.jpg?ig_cache_key=MTMzMTg0MTI1NTIxODg3MTIzMA%3D%3D.2.c">
+</div>
         </div>
     </div>
 

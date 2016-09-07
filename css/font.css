@@ -3,7 +3,7 @@
 
 
 @font-face {
-	font-family: 'TH Sarabun New';
+	font-family: 'T';
 	src: url('THSarabunNew.eot');
 	src: url('THSarabunNew.eot?#iefix') format('embedded-opentype'),
 		url('THSarabunNew.woff2') format('woff2'),
@@ -13,3 +13,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'K';
+    src: url('katfyred-webfont.woff2') format('woff2'),
+         url('katfyred-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
