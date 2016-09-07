@@ -88,7 +88,7 @@ func main() {
 		defer session.Close()
 		session.SetMode(mgo.Monotonic, true)
 		prod := session.DB("prod")
-		prod.Login("admin", "Ball0931372529")
+		prod.Login("admin", "Ball0981042529")
 		mc := &MyCollection{prod.C("goods")}
 		c.JSON(http.StatusOK, mc.findAllGoods())
 	})
@@ -103,7 +103,7 @@ func main() {
 		defer session.Close()
 		session.SetMode(mgo.Monotonic, true)
 		prod := session.DB("prod")
-		prod.Login("admin", "Ball0931372529")
+		prod.Login("admin", "Ball0981042529")
 		mc := &MyCollection{prod.C("goods")}
 		c.JSON(http.StatusOK, mc.findAllGoodsByCollection(goodsCollection))
 
@@ -118,7 +118,7 @@ func main() {
 		defer session.Close()
 		session.SetMode(mgo.Monotonic, true)
 		prod := session.DB("prod")
-		prod.Login("admin", "Ball0931372529")
+		prod.Login("admin", "Ball0981042529")
 		mc := &MyCollection{prod.C("goods")}
 		c.JSON(http.StatusOK, mc.findOneGoodsById(goodsId))
 

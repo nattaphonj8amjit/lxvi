@@ -11,10 +11,6 @@ MainJS = (function ($) {
 
 
 
-
-
-
-
     function getAllGoods() {
         $.ajax({
                 method: "GET",
@@ -81,5 +77,5 @@ MainJS = (function ($) {
 
 $(function () {
     MainJS.init();
-    MainJS.getAllGoods();
+    //MainJS.getAllGoods();
 })
